@@ -13,52 +13,130 @@ public class Unit0Tests {
      */
     public static void main (String args[]) {
       // Use main to test your methods
-      printHelloWorld();
+        printHelloWorld();
+
+        System.out.println(returnPrimitiveBooleanTrue());
+
+        System.out.println(returnPrimitiveInt1729());
+
+        System.out.println(returnPrimitiveDoubleThreePointOneFour());
+
+        System.out.println(returnPrimitiveCharZ());
+
+       printSumOf1Upto10UsingForLoop();
+
+        printSumOf1Upto10000UsingForLoop();
+
+        System.out.println(isOdd(4));
+
+        System.out.println(isMultipleOfThree(9));
+
+        System.out.println(isOddAndIsMultipleOfThree(4));
+
+//        Person person = new Person("Alan Turing");
+//
+//        System.out.println(declareAndReturnPersonNamedAda());
+//
+//        System.out.println(isFromLondon(person));
+
+
+
+
     }
 
     public static void printHelloWorld() {
-      System.out.println("");
+      System.out.println("Hello World");
     }
 
-    public static Object returnPrimitiveBooleanTrue() {
-      return null;
+    public static Boolean returnPrimitiveBooleanTrue() {
+
+      return true;
     }
 
-    public static Object returnPrimitiveInt1729() {
-      return null;
+    public static int returnPrimitiveInt1729() {
+      int x = 1729;
+        return x;
     }
 
-    public static Object returnPrimitiveDoubleThreePointOneFour() {
-      return null;
+    public static double returnPrimitiveDoubleThreePointOneFour() {
+      double pi = 3.14;
+        return pi;
     }
 
-    public static Object returnPrimitiveCharZ() {
-        return false;
+    public static char returnPrimitiveCharZ() {
+
+        char z = 'z';
+        return z;
     }
 
+    //fixme
     public static void printSumOf1Upto10UsingForLoop() {
-    }
+        int sum = 0;
 
+        for(int i= 1;i <= 10;i++){
+
+            sum+=i;
+
+        }
+        System.out.println(sum);
+    }
+    //fixme
     public static void printSumOf1Upto10000UsingForLoop() {
+        int sum=0;
+
+        for(int i= 1;i <= 10000;i++){
+
+            sum+=i;
+        }
+        System.out.println(sum);
     }
 
-    public static boolean isOdd(int n) {
-      return false;
-    }
 
+    public static boolean isOdd(int n)
+    {
+        boolean isODD = false;
+
+        if(n % 2 == 0)
+        {
+            return  isODD;
+        }
+        else
+        {
+            return true;
+        }
+    }
     public static boolean isMultipleOfThree(int n) {
-      return false;
+
+      //  a is a multiple of b if a % b == 0 is true
+
+        if(n % 3==0)
+            return true;
+        else
+         return false;
+
     }
 
     public static boolean isOddAndIsMultipleOfThree(int n) {
-      return false;
-    }
 
+        if(isOdd(n)==true &&isMultipleOfThree(n)==true)
+            return true;
+        else
+            return false;
+    }
+    //fixme
     public static String repeatStringXTimes(String input, int times) {
         // Given string "input" and a positive integer "times",
         // return a string that is equal to the input string repeated X times.
         // If "times" is 0 negative, return a blank string.
         // For example, repeatStringXTimes("potato", 5) should return "potatopotatopotatopotatopotato".
+
+        String xTimes="";
+
+        for(int i=0;i<=times;i++){
+
+
+        }
+
         return "";
     }
 
@@ -70,18 +148,38 @@ public class Unit0Tests {
     }
 
     public static Person declareAndReturnPersonNamedAda() {
-      return null;
+        Person Ada = new Person();
+
+        Ada.setName("Ada");
+
+
+      return Ada;
     }
 
     public static Person declareAndReturnPersonNamedAlanTuringFromLondon() {
-      return null;
+      Person person = new Person("Alan Turing");
+
+        person.setCity("London");
+
+        return person;
     }
 
     public static boolean isFromLondon(Person person) {
-      return false;
+       person = new Person();
+         if (person.getCity().equalsIgnoreCase("London")){
+             return true;
+         }
+        else
+             return false;
     }
 
     public static ArrayList<Place> declareAndReturnArrayListOfThreePlaces() {
+       ArrayList<Place> places = new ArrayList<Place>();
+
+        Place place = new Place();
+        //places.add();
+
+
         return null;
     }
 
@@ -89,10 +187,23 @@ public class Unit0Tests {
       // The HashMap should have key-value pairs of:
       // - key: `Alan Turing`, value: instance of Person with name `Alan Turing`
       // - key: `Grace Hopper`, value: instance of Person with name `Grace Hopper`
-      return null;
+
+        HashMap<String,Person> people= new HashMap<String, Person>();
+
+        Person person = new Person();
+
+       // people.add("Alan Turing",person.setCity("London"));
+
+
+        return people;
+
     }
 
     public static void changeTuringsCityToPrinceton(HashMap<String, Person> people) {
+
+
+
+
     }
 
     // Bonus Problems
